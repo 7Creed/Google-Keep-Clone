@@ -12,7 +12,7 @@ const body = document.body;
 
 class App {
   constructor() {
-    this.notes = JSON.parse(localStorage.getItem("notes") || []);
+    this.notes = JSON.parse(localStorage.getItem("notes")) || [];
     // this.notes = [];
     this.title = "";
     this.text = "";
@@ -143,12 +143,6 @@ class App {
     const noteCoords = event.target.getBoundingClientRect();
     console.log(noteCoords);
     const horizontal = noteCoords.left + window.scrollX;
-    // for (let not of note) {
-    //     const newVertical = not.getBoundingClientRect().height + window.scrollY
-    //     this.colorTooltip.style.transform = `translate(${horizontal}px, ${newVertical}px)`;
-    //     console.log(note);
-    // }
-    // console.log(this.$notes);
     const vertical = noteCoords.bottom ;
     console.log(vertical, window.scrollY);
     this.colorTooltip.style.transform = `translate(${horizontal}px, ${vertical}px)`;
