@@ -14,6 +14,7 @@ class App {
   constructor() {
     // this.notes = [] && JSON.parse(localStorage.getItem("notes"));
     this.notes = (JSON.parse(localStorage.getItem("notes")) || []) ;
+    console.log(this.notes);
     // this.notes = [];
     this.title = "";
     this.text = "";
