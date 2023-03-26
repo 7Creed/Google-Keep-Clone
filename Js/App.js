@@ -135,19 +135,19 @@ class App {
     this.modal.classList.toggle("open-modal");
   }
 
-  openTooltip(event) {
-    if (!event.target.matches(".toolbar-color")) return;
-    // const note = document.querySelectorAll('.note')
-    this.id = event.target.dataset.id;
-    // console.log(event.target);
-    const noteCoords = event.target.getBoundingClientRect();
-    // console.log(noteCoords);
-    const horizontal = noteCoords.left + window.scrollX;
-    const vertical = noteCoords.bottom + window.scrollY;
-    // console.log(vertical, window.scrollY);
-    this.colorTooltip.style.transform = `translate(${horizontal}px, ${vertical}px)`;
-    this.colorTooltip.style.display = "flex";
-  }
+//   openTooltip(event) {
+//     if (!event.target.matches(".toolbar-color")) return;
+//     // const note = document.querySelectorAll('.note')
+//     this.id = event.target.dataset.id;
+//     // console.log(event.target);
+//     const noteCoords = event.target.getBoundingClientRect();
+//     // console.log(noteCoords);
+//     const horizontal = noteCoords.left + window.scrollX;
+//     const vertical = noteCoords.bottom + window.scrollY;
+//     // console.log(vertical, window.scrollY);
+//     this.colorTooltip.style.transform = `translate(${horizontal}px, ${vertical}px)`;
+//     this.colorTooltip.style.display = "flex";
+//   }
 
   closeTooltip(event) {
     if (!event.target.matches(".toolbar-color")) return;
